@@ -205,6 +205,8 @@ as well.
 
 ### Step-15 Link to A+ compliant `Aayega` aka Promises lib on npm 
 
+[Aayega on NPM](https://www.npmjs.com/package/aayega)
+
 
 ### Step-16 If you want to play around or test the compliance ::::: 
 
