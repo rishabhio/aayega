@@ -1,0 +1,27 @@
+{
+  "name": "aayega",
+  "version": "1.0.0",
+  "description": "aayega is a promises library compliant with promises / A+ spec ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabhio/aayega.git"
+  },
+  "keywords": [
+    "promises",
+    "aayega",
+    "rishabhio",
+    "A+",
+    "compliant",
+    "es6"
+  ],
+  "author": "@rishabhio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabhio/aayega/issues"
+  },
+  "homepage": "https://github.com/rishabhio/aayega#readme"
+}
