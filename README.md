@@ -31,8 +31,8 @@ It is advised to read the spec at least 5 times if you're like me :)
 
 Following is what I got ater going through the spec for a few times. 
 
-![alt text][aplus]
-[aplus]: https://github.com/rishabhio/aayega/blob/master/assets/aplus.jpg "A plus Implementation"
+![alt text] [aplus]
+[aplus]: https://raw.githubusercontent.com/rishabhio/aayega/master/assets/aplus.jpg "A plus Implementation"
 
 
 By reading the spec a few times, we can easily draw the following inferences >>> 
