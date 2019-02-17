@@ -31,8 +31,8 @@ It is advised to read the spec at least 5 times if you're like me :)
 
 Following is what I got ater going through the spec for a few times. 
 
-![alt text] [aplus]
-[aplus]: https://raw.githubusercontent.com/rishabhio/aayega/master/assets/aplus.jpg "A plus Implementation"
+![A plus implementation](https://raw.githubusercontent.com/rishabhio/aayega/master/assets/aplus.jpg)
+
 
 
 By reading the spec a few times, we can easily draw the following inferences >>> 
@@ -64,3 +64,46 @@ npm init
 Run the above command and provide all the details. 
 
 
+### Step-3 Setup the code structure 
+1. `lib` folder to store the code for our library 
+2. `tests` folder to store the adapter we write 
+3. `index.js` file is the entry point to the package
+
+### Step-4 Run the following command to install the compliance tests package 
+```
+npm install --save-dev promises-aplus-tests
+
+```
+
+### Step-5 Provide the adapter as mentioned in the specification 
+Create the following file in the tests folder. 
+```
+aayega-adapter.js
+```
+
+### Step-6 Write the required functions in the adapter as follows 
+
+check file `aayega-adapter.js` for the relevant code. 
+
+### Step-7 Add the test command in the package.json file 
+```
+// package.json 
+. . .
+        "test": "promises-aplus-tests tests/aayega-adapter"
+
+. . . 
+```
+
+First time you run `npm test` , it will give 'Cannot find Module' error because we've not yet set 
+up the aayega module. Let's do that next.  
+
+### Step-8 In the lib directory, create a module
+
+```
+    aayega.js 
+```
+
+```
+    // Initialize promise structure as per the spec 
+    // Please read the inline comments in the code itself for better understanding. 
+```
