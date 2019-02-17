@@ -9,6 +9,12 @@ npm test
 
 ``` 
 
+# Usage 
+```
+    npm install aayega 
+
+```
+
 # What is Aayega?
 > Aayega is a promises library which is compliant with promises / A+ spec. 
 
@@ -108,4 +114,102 @@ up the aayega module. Let's do that next.
     // Please read the inline comments in the code itself for better understanding. 
 ```
 
-### write the Aayega class with all the basic attributes and methods 
+### Step-9 write the Aayega class with all the basic attributes and methods
+
+In short we've to fill in the following structure ::::: 
+This is how an `Aayega` aka Promise looks like. 
+```
+class Aayega {
+    constructor(asyncOp) {
+        const self = this;
+
+        this.value = null;
+        this.state = STATES.PENDING;
+        this.queue = [];
+        this.handlers = {
+            fulfill: null,
+            reject: null
+        };
+        if (asyncOp) {
+            asyncOp((value) => {
+                runPRP(self, value);
+            }, (reason) => {
+                self.reject(reason);
+            });
+        }
+    }
+
+    changeState(state, value) {
+    }
+
+    executeChain() {
+
+    }
+    reject(reason) {
+
+    }
+    fulfill(value) {
+
+    }
+    then(onFulfilled, onRejected) {
+
+    }
+}
+
+``` 
+
+### Step-10 Implementing the PRP aka Promise Resolution Procedure 
+
+```
+    Section 2.3 is all about this. Please read the inline comments in code function 
+        runPrp to get more details on it. 
+```
+
+### The then method
+
+```
+     then takes onFulfilled , onRejected an returns a new promise which goes through the PRP via 
+        the executeChain method in order to decide on how actually it needs to resolve. 
+```
+
+### Step-11 Making the software browser compatible 
+I've used a quick / dirty hack to ensure the software can be made useful in browser environment 
+as well. 
+
+```
+    if (typeof module !== 'undefined') {
+        if (typeof module.exports !== 'undefined') {
+            module.exports = Aayega;
+        }
+    } else {
+        window.Aayega = Aayega;
+    }
+```
+
+### Step-12 Run the Test Cases again 
+
+```
+    npm test 
+```
+
+### Step-13 The feeling of accomplishment 
+
+![A moment of accomplishment](https://raw.githubusercontent.com/rishabhio/aayega/master/assets/success.png)
+
+### Step-14 Launching to NPM 
+
+```
+    npm login 
+    npm publish 
+```
+
+### Step-15 Link to A+ compliant `Aayega` aka Promises lib on npm 
+
+
+### Step-16 If you want to play around or test the compliance ::::: 
+
+```
+    git clone https://github.com/rishabhio/aayega.git
+    npm install 
+    npm test
+```
