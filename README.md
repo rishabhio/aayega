@@ -107,3 +107,5 @@ up the aayega module. Let's do that next.
     // Initialize promise structure as per the spec 
     // Please read the inline comments in the code itself for better understanding. 
 ```
+
+### write the Aayega class with all the basic attributes and methods 
